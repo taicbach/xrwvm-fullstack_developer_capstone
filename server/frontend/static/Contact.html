@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Cars Dealership</title>
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    body { background: #f5f7fa; color: #172b4d; }
+    .navbar { background: #0b7285; }
+    .navbar-brand, .navbar .nav-link { color: white !important; }
+    .navbar .nav-link.active { font-weight: 700; text-decoration: underline; }
+    .hero { background: #e7f5f8; text-align: center; padding: 65px 20px; }
+    .hero h1 { font-weight: 750; font-size: 2.5rem; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr;
+                    gap: 30px; max-width: 1100px; margin: 45px auto;
+                    padding: 0 20px; }
+    .contact-card { background: white; padding: 32px; border-radius: 14px;
+                    box-shadow: 0 5px 18px rgba(0,0,0,.07); }
+    .contact-card img { width: 100%; border-radius: 12px; }
+    .contact-card h2 { font-size: 1.5rem; margin-bottom: 20px; }
+    .contact-detail { padding: 12px 0; border-bottom: 1px solid #e7edf3; }
+    .contact-detail strong { display: block; color: #0b7285; }
+    .contact-detail a { overflow-wrap: anywhere; }
+    footer { text-align: center; padding: 25px; color: #57657a; }
+    @media(max-width: 760px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">Cars Dealership</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/dealers/">Dealers</a>
+        <a class="nav-link" href="/about">About Us</a>
+        <a class="nav-link active" href="/contact">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Contact Us</h1>
+    <p>Have a question about a dealership or your customer experience?
+       Find out how to get in touch.</p>
+  </header>
+
+  <main class="contact-grid">
+    <section class="contact-card">
+      <img src="/static/contactus.png" alt="Contact our support team">
+      <h2 class="mt-4">We're Here to Help</h2>
+      <p>Explore dealership listings and customer reviews through our
+         platform. For project demonstrations, use the example contact
+         details shown alongside this page.</p>
+    </section>
+
+    <section class="contact-card">
+      <h2>Get in Touch</h2>
+      <div class="contact-detail">
+        <strong>Customer Support</strong>
+        <a href="mailto:support@example.com">support@example.com</a>
+      </div>
+      <div class="contact-detail">
+        <strong>Partnerships and Dealer Inquiries</strong>
+        <a href="mailto:dealers@example.com">dealers@example.com</a>
+      </div>
+      <div class="contact-detail">
+        <strong>Telephone (Demo)</strong>
+        (202) 555-0145
+      </div>
+      <div class="contact-detail">
+        <strong>Office (Demo)</strong>
+        United States — online project demonstration
+      </div>
+      <div class="contact-detail">
+        <strong>Support Hours (Demo)</strong>
+        Monday–Friday, 9:00 AM–5:00 PM
+      </div>
+      <p class="mt-4 text-muted">
+        Note: This is an educational capstone application.
+        Contact details are illustrative and are not a live
+        customer support service.
+      </p>
+    </section>
+  </main>
+
+  <footer>Cars Dealership | Full Stack Capstone Project</footer>
+</body>
+</html>

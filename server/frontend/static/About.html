@@ -1,68 +1,102 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Cars Dealership</title>
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    body { background: #f5f7fa; color: #172b4d; }
+    .navbar { background: #0b7285; }
+    .navbar-brand, .navbar .nav-link { color: white !important; }
+    .navbar .nav-link.active { font-weight: 700; text-decoration: underline; }
+    .hero { padding: 65px 20px; text-align: center; background: #e7f5f8; }
+    .hero h1 { font-weight: 750; font-size: 2.5rem; }
+    .hero p { max-width: 740px; margin: 15px auto; line-height: 1.7; }
+    .team { max-width: 1100px; margin: 45px auto; padding: 0 20px; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .member { background: white; border-radius: 14px; overflow: hidden;
+              box-shadow: 0 5px 18px rgba(0,0,0,.07); }
+    .member img { width: 100%; height: 200px; object-fit: cover; }
+    .member-body { padding: 22px; }
+    .member h3 { font-size: 1.25rem; margin-bottom: 5px; }
+    .role { color: #0b7285; font-weight: 600; }
+    .member a { overflow-wrap: anywhere; }
+    .story { background: white; border-radius: 14px; padding: 30px;
+             margin-bottom: 35px; line-height: 1.8; }
+    footer { text-align: center; padding: 25px; color: #57657a; }
+    @media(max-width: 760px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">Cars Dealership</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/dealers/">Dealers</a>
+        <a class="nav-link active" href="/about">About Us</a>
+        <a class="nav-link" href="/contact">Contact Us</a>
       </div>
     </div>
   </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
+  <header class="hero">
+    <h1>About Cars Dealership</h1>
+    <p>Helping drivers explore dealership locations, compare customer
+       experiences, and make more informed decisions when shopping for a car.</p>
+  </header>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    
-</div>
+  <main class="team">
+    <section class="story">
+      <h2>Our Mission</h2>
+      <p>Cars Dealership brings dealership information and customer feedback
+         together in one easy-to-use platform. Visitors can explore dealership
+         locations across the United States, filter results by state, and read
+         customer experiences before selecting a dealership.</p>
+      <p>Our platform also supports customer reviews and sentiment analysis,
+         making it easier to understand both positive and negative feedback.</p>
+    </section>
 
+    <h2 class="mb-4">Meet Our Team</h2>
+    <div class="team-grid">
+      <article class="member">
+        <img src="/static/person.png" alt="Illustrated team member avatar">
+        <div class="member-body">
+          <h3>Alex Morgan</h3>
+          <p class="role">Customer Experience Lead</p>
+          <p>Alex supports the customer experience and focuses on making
+             dealership information easy to understand and navigate.</p>
+          <a href="mailto:alex@example.com">alex@example.com</a>
+        </div>
+      </article>
+      <article class="member">
+        <img src="/static/person.png" alt="Illustrated team member avatar">
+        <div class="member-body">
+          <h3>Jordan Lee</h3>
+          <p class="role">Dealership Operations Manager</p>
+          <p>Jordan coordinates dealership information and helps keep
+             location details organized and consistent.</p>
+          <a href="mailto:jordan@example.com">jordan@example.com</a>
+        </div>
+      </article>
+      <article class="member">
+        <img src="/static/person.png" alt="Illustrated team member avatar">
+        <div class="member-body">
+          <h3>Taylor Brooks</h3>
+          <p class="role">Technology Lead</p>
+          <p>Taylor oversees the platform experience, including dealership
+             search, customer reviews, and sentiment analysis features.</p>
+          <a href="mailto:taylor@example.com">taylor@example.com</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>Cars Dealership | Full Stack Capstone Project</footer>
+</body>
 </html>
